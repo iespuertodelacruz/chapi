@@ -1,7 +1,7 @@
 dateparser==0.3.4
 decorator==4.0.6
 diff-match-patch==20121119
-Django==1.9.1
+Django==1.11.23
 django-bootstrap-form==3.2
 django-queryset-csv==0.3.3
 ecdsa==0.13
