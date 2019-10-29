@@ -19,7 +19,7 @@ def deploy():
 
 def download_db():
     remote_host = env.hosts[0]
-    local('scp {}:~/chapi/db.sqlite3 .'.format(remote_host))
+    local('scp {}:~/chapi/*.sqlite3 .'.format(remote_host))
 
 
 def download_media():
