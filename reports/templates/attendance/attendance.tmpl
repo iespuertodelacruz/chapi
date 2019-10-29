@@ -1,0 +1,36 @@
+{% extends "base/base.tmpl" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="reports/templates/base/certificates.css">
+{% endblock %}
+
+{% block body %}
+    {% for a in attendants %}
+        <h1>Certificado de asistencia a CHAPI{{ config.get_value("edition") }}</h1>
+        <p>
+            {{ config.get_value("director") }}, como director del {{ config.get_value("host_institution") }}, hago constar que:
+        <h2>{{ a }}</h2>
+        <h3><i class="fa fa-building-o"></i> {{ a.workplace.upper() }}</h3>
+        <p>
+            Ha asistido al evento CHAPI (Charlas para Profesores de Informática) <a href="http://chapi.org">chapi.org</a> celebrado el día <strong>{{ config.get_value("event_date") }}</strong> en horario de <strong>{{ config.get_value("event_time_interval") }}</strong> en el {{ config.get_value("host_institution") }}.
+        </p>
+        <p class="request">
+            Para que así conste a los efectos oportunos.
+        </p>
+        <p class="signature">
+            En {{ config.get_value("host_city") }}, a {{ config.get_value("certificate_date") }}.
+            <br/>
+            <br/>
+            <br/>
+            El/La director/a,
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            Fdo.: {{ config.get_value("director") }}
+        </p>
+        <div class="page-break"></div>
+    {% endfor %}
+{% endblock %}

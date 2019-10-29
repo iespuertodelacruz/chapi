@@ -1,0 +1,63 @@
+@font-face
+    font-family: liberation
+    font-style: normal
+    font-weight: normal
+    src: url("../../static/fonts/LiberationSerif-Regular.ttf")
+
+@font-face
+    font-family: liberation
+    font-style: normal
+    font-weight: bold
+    src: url("../../static/fonts/LiberationSerif-Bold.ttf")
+
+body
+    font-family: liberation
+
+.content
+    font-size: 16pt
+
+@page
+    size: a4
+    margin: 2cm
+    padding-top: 2cm
+    @top-left
+        margin-top: 2cm
+        content: flow(top-left)
+    @top-right
+        margin-top: 2cm
+        content: flow(top-right)
+    @bottom-right
+        content: flow(bottom-right)
+    // @bottom-left
+    //     content: "IES Puerto de la Cruz - Telesforo Bravo"
+    // @bottom-center
+    //     content: counter(page) "/" counter(pages)
+
+.top-left
+    flow: static(top-left)
+    font-weight: bold
+
+.top-right
+    flow: static(top-right)
+    float: right
+    font-weight: bold
+
+.bottom-right
+    flow: static(bottom-right)
+    float: right
+
+.bottom-left
+    flow: static(bottom-left)
+
+table
+    border-collapse: collapse
+
+td
+    border: 1px solid black
+    padding: 2mm
+
+.page-break
+    page-break-after: always
+
+i
+    color: #999999
