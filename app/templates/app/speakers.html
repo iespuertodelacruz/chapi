@@ -1,0 +1,37 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="section-title">
+        <i class="fa fa-bullhorn"></i> Ponentes
+    </div>
+    {% for s in speakers %}
+        <div class="row speaker">
+            <div class="col-md-2">
+                {% if s.avatar %}
+                    <img class="avatar" src="{{ s.avatar.url }}"/>
+                {% else %}
+                    <img src="{% static 'app/img/avatar.png' %}"/>
+                {% endif %}
+            </div>
+            <div class="col-md-3">
+                <blockquote>
+                    <strong>{{ s.assistant.name }}</strong>
+                    <br>
+                    {{ s.assistant.workplace }}
+                </blockquote>
+            </div>
+            <div class="col-md-3">
+                <p>
+                    <em>{{ s.bio }}</em>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <strong>{{ s.talk_title }}</strong>
+                <p>
+                    {{ s.talk_abstract }}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

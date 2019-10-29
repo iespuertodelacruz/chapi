@@ -1,0 +1,45 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <div class="section-title">
+            <i class="fa fa-download"></i> Descargas
+        </div>
+
+        <div class="alert alert-info" role="alert"><b>CHAPI 2016</b></div>
+        <p>
+            <i class="fa fa-circle-o"></i>
+            Presentación de David Vargas:
+                <a href="{% static 'app/downloads/chapi16-sysadmingame_final.odp' %}">
+                    <i class="fa fa-file-text-o"></i> libreoffice
+                </a>
+                |
+                <a href="{% static 'app/downloads/chapi16-sysadmingame_final.pdf' %}">
+                    <i class="fa fa-file-pdf-o"></i> pdf
+                </a>        
+        </p>
+        <p>
+            <i class="fa fa-circle-o"></i>
+            Presentación de Emilio Aguilar:
+                <a href="https://drive.google.com/open?id=0B0tUAZnW9rruZUJDVm1URVRLaG8"><i class="fa fa-link"></i> Carpeta de Google Drive</a>
+        </p>
+
+        <div class="alert alert-info" role="alert"><b>CHAPI 2017</b></div>
+
+        <p>
+            <i class="fa fa-circle-o"></i>
+            <a href="https://accenture.github.io/adop-docker-compose/">Jorge Hidalgo. Charla sobre Devops</a>
+        </p>
+
+        <p>
+            <i class="fa fa-circle-o"></i>
+            <a href="https://www.youtube.com/channel/UCqjExtvnxnolGfg2FALmL_w">Canal de Youtube creado para CHAPI</a>
+        </p>
+
+    </div>
+</div>
+
+{% endblock %}

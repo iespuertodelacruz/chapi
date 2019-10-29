@@ -1,0 +1,76 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>CHAPI</title>
+        <link href="{% static 'app/bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet"/>
+        <link href="{% static 'app/bower_components/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
+        <link href="{% static 'app/bower_components/lightbox2/src/css/lightbox.css' %}" rel="stylesheet"/>
+        <link href="{% static 'app/css/app.css' %}" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Chapi 2019</a></li> 
+                    <li><a href="/agenda/">Agenda</a></li> 
+                    <li><a href="/financing/">Gastos</a></li> 
+                    <li><a href="/rooms/">Salas</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Asistentes <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/listeners/"><i class="fa fa-headphones"></i> Oyentes <span class="badge">{{ listeners.count }}</span></a></li>
+                            <li><a href="/speakers/"><i class="fa fa-bullhorn"></i> Ponentes <span class="badge">{{ speakers.count }}</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/location/"><i class="fa fa-map-marker"></i> Localización</a></li>
+                    <li><a href="/downloads/"><i class="fa fa-download"></i> Descargas</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/admin/">admin <i class="fa fa-cog"></i></a></li> 
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row header">
+                <div class="col-md-3">
+                    <a href="/"><img class="logo" src="{% static 'app/img/chapi.jpg' %}"/></a>
+                </div>
+                <div class="col-md-6 title">
+                    <h1><kbd>cha</kbd>rlas formativas orientadas a <kbd>p</kbd>rofesores de <kbd>i</kbd>nformática</h1>
+                    <blockquote>
+                        <span class="event-date"><i class="fa fa-calendar"></i> Viernes 29 de marzo de 2019</span>
+                    </blockquote>
+                </div>
+                <div class="col-md-3 address">
+                    <blockquote>
+                        <strong>CIFP César Manrique</strong><br>
+                        Avda. Príncipes de España, num. 5<br>
+                        Santa Cruz de Tenerife<br>
+                    </blockquote>
+                    Tuitea con el hashtag <code>#chapi19</code> <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+            
+            {% block content %}{% endblock %}
+
+            <div class="row footer text-center">
+                <div class="col-md-6">
+                    <a target="blank" href="https://twitter.com/CanariasChapi"><i class="fa fa-twitter"></i> @CanariasChapi</a>
+                </div>
+                <div class="col-md-6">
+                    <a target="blank" href="mailto:chapi.canarias@gmail.com"><i class="fa fa-envelope"></i> chapi.canarias@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="{% static 'app/bower_components/jquery/dist/jquery.min.js' %}"></script>
+        <script src="{% static 'app/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'app/bower_components/lightbox2/src/js/lightbox.js' %}"></script>
+        <script src="{% static 'app/js/app.js' %}"></script>
+    </body>
+</html>

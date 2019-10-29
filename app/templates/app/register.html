@@ -1,0 +1,21 @@
+{% extends "app/base.html" %}
+
+{% load bootstrap %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="section-title">
+                Formulario de registro
+            </div>
+            <form role="form" method="post">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <div class="form-group">
+                      <button id="btn-register" type="submit" class="btn btn-primary">Enviar</button>
+                      <a href="/" id="btn-cancel" role="button" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="section-title">
+                <i class="fa fa-desktop"></i> Salas/Instalaciones
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <a data-lightbox="room" href="{% static 'app/img/rooms/cifp_cesarmanrique/LARGE/aula232.jpg' %}"><img src="{% static 'app/img/rooms/cifp_cesarmanrique/aula232.jpg' %}"></img></a>
+            <blockquote>Aula 232</blockquote>
+        </div>
+        <div class="col-md-4">
+            <a data-lightbox="room" href="{% static 'app/img/rooms/cifp_cesarmanrique/LARGE/salaAudiovisuales.jpg' %}"><img src="{% static 'app/img/rooms/cifp_cesarmanrique/salaAudiovisuales.jpg' %}"></img></a>
+            <blockquote>Sala de audiovisuales</blockquote>
+        </div>
+    </div>
+{% endblock %}

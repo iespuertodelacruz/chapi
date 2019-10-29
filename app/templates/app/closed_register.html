@@ -1,0 +1,29 @@
+{% extends "app/base.html" %}
+
+{% load bootstrap %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-offset-3 col-md-4">
+            <p class="warning">
+                <i class="fa fa-exclamation-triangle"></i>
+                Lo sentimos, pero el registro está cerrado desde el <strong>{{ register_deadline }}</strong>
+                <div class="big-lock">
+                    <i class="fa fa-lock"></i>
+                </div>
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p class="pass">
+                <i class="fa fa-ticket"></i> Si dispones de un pase especial, introduce tu código aquí:
+            </p>
+            <form role="form" method="post">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <div class="form-group">
+                      <button id="btn-register" type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

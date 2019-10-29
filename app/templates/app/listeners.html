@@ -1,0 +1,30 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="section-title">
+                <i class="fa fa-headphones"></i> Oyentes
+            </div>
+            {% if workplaces.items %}
+                <p class="listener-workplaces">
+                    Vendrán oyentes de las siguientes organizaciones:
+                </p>
+                {% for key, value in workplaces.items %}
+                    {% if forloop.counter0|divisibleby:6 %}
+                        <div class="row listener-row">
+                    {% endif %}
+                    <div class="col-md-2 text-center">
+                        <img src="{% static 'app/img/building.png' %}"/>
+                        <div class="workplace">{{ key }}</div>
+                        <span class="badge">{{ value }}</span>
+                    </div>
+                    {% if forloop.counter|divisibleby:6 or forloop.last %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

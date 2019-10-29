@@ -1,0 +1,12 @@
+{% extends "app/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="row text-center">
+        <h3>Tus datos se han guardado satisfactoriamente</h3>
+        <img class="well-saved" src="{% static 'app/img/cesar.jpg' %}"/>
+        <div class="btn-thanks">
+            <a href="/" role="button" class="btn btn-success btn-lg">Gracias por participar!</a>
+        </div>
+    </div>
+{% endblock %}
