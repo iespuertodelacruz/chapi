@@ -26,3 +26,4 @@ six==1.10.0
 tablib==0.11.2
 traitlets==4.1.0
 umalqurra==0.2
+prettyconf==1.2.3
