@@ -4,7 +4,7 @@ diff-match-patch==20121119
 Django==1.9.1
 django-bootstrap-form==3.2
 django-queryset-csv==0.3.3
-ecdsa==0.13
+ecdsa==0.13.3
 gnureadline==6.3.3
 jdatetime==1.7.4
 Jinja2==2.8
