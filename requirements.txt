@@ -7,7 +7,7 @@ django-queryset-csv==0.3.3
 ecdsa==0.13
 gnureadline==6.3.3
 jdatetime==1.7.4
-Jinja2==2.8
+Jinja2==2.11.3
 MarkupSafe==0.23
 paramiko==1.16.0
 path.py==8.1.2
