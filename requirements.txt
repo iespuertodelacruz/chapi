@@ -23,7 +23,7 @@ redis==2.10.5
 regex==2016.4.8
 simplegeneric==0.8.1
 six==1.10.0
-tablib==0.11.2
+tablib==0.11.5
 traitlets==4.1.0
 umalqurra==0.2
 prettyconf==1.2.3
