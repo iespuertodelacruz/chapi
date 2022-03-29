@@ -9,7 +9,7 @@ gnureadline==6.3.3
 jdatetime==1.7.4
 Jinja2==2.8
 MarkupSafe==0.23
-paramiko==1.16.0
+paramiko==2.10.1
 path.py==8.1.2
 pexpect==4.0.1
 pickleshare==0.5
